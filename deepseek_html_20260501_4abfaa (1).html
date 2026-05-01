@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>NexusAudit – Forensic Revenue Integrity Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+          <rect width="34" height="34" rx="8" fill="url(#logoGrad)" />
+          <path d="M12 23l5-10 5 10H12z" fill="#fff" fill-opacity="0.9" />
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00F2FE" />
+              <stop offset="1" stop-color="#4FACFE" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>
+          <h1>NexusAudit</h1>
+          <span class="tagline">Forensic Revenue Integrity Engine</span>
+        </div>
+      </div>
+      <div class="header-status">
+        <span class="status-dot"></span> System Ready
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>See through the fog of operational noise.</h2>
+        <p>NexusAudit illuminates hidden revenue leakage in your Shopify and TikTok Shop ecosystems. We find the duplicate orders, payout mismatches, and ghost fees your dashboards miss.</p>
+        <div class="hero-actions">
+          <a href="#uploadSection" class="btn-primary">Get Free Audit</a>
+          <a href="#howItWorks" class="btn-secondary">How it works</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">$4.2B</span>
+          <span class="stat-label">Commerce Volume Audited</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">92.4%</span>
+          <span class="stat-label">Avg. Recovery Rate</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">48h</span>
+          <span class="stat-label">From Upload to Report</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">SOC2</span>
+          <span class="stat-label">Type II Compliant</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Leakage Ticker -->
+    <div class="ticker-wrapper">
+      <div class="ticker-track">
+        <div class="ticker-item">🔴 Duplicate Order #9421 +$1,240.80</div>
+        <div class="ticker-item">🟠 TikTok Payout Mismatch +$4,821.50</div>
+        <div class="ticker-item">🟡 Inventory Sync Ghost Fee +$842.12</div>
+        <div class="ticker-item">🔴 Duplicate Order #1052 +$1,240.80</div>
+        <div class="ticker-item">🟠 Stripe Fee Spike +$132.40</div>
+        <!-- duplicates for seamless loop -->
+        <div class="ticker-item">🔴 Duplicate Order #9421 +$1,240.80</div>
+        <div class="ticker-item">🟠 TikTok Payout Mismatch +$4,821.50</div>
+        <div class="ticker-item">🟡 Inventory Sync Ghost Fee +$842.12</div>
+        <div class="ticker-item">🔴 Duplicate Order #1052 +$1,240.80</div>
+        <div class="ticker-item">🟠 Stripe Fee Spike +$132.40</div>
+      </div>
+    </div>
+
+    <!-- Platforms -->
+    <div class="platforms">
+      <span>BUILT FOR SELLERS ON</span>
+      <div class="platform-logos">
+        <span class="platform-badge">Shopify Plus</span>
+        <span class="platform-badge">TikTok Shop</span>
+        <span class="platform-badge">Stripe</span>
+      </div>
+    </div>
+
+    <!-- How it works (anchor) -->
+    <div id="howItWorks" class="card how-card">
+      <h2>⚡ How NexusAudit Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <strong>Upload your CSVs</strong>
+          <p>Drop your Shopify Orders, Payouts, TikTok exports, and optional Stripe data.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <strong>Deterministic forensic engine</strong>
+          <p>Our rules-based engine normalises and cross‑references every transaction – no AI hallucinations.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <strong>Receive an executive report</strong>
+          <p>Get a detailed leakage heatmap, recoverable value, and (optionally) an AI‑written CFO summary.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload Section -->
+    <section id="uploadSection" class="card upload-card">
+      <div class="card-header">
+        <h2>📁 Start Your Free Audit</h2>
+        <p>Select your export files. We accept messy CSVs – missing columns, commas, and all.</p>
+      </div>
+      <div class="file-grid">
+        <label class="file-label">
+          <span class="file-icon">🛒</span>
+          <span>Shopify Orders</span>
+          <input type="file" id="shopifyOrders" class="file-input" />
+          <span class="file-placeholder" data-placeholder="shopifyOrders">No file chosen</span>
+        </label>
+        <label class="file-label">
+          <span class="file-icon">💳</span>
+          <span>Shopify Payouts</span>
+          <input type="file" id="shopifyPayouts" class="file-input" />
+          <span class="file-placeholder" data-placeholder="shopifyPayouts">No file chosen</span>
+        </label>
+        <label class="file-label">
+          <span class="file-icon">📦</span>
+          <span>TikTok Orders</span>
+          <input type="file" id="tiktokOrders" class="file-input" />
+          <span class="file-placeholder" data-placeholder="tiktokOrders">No file chosen</span>
+        </label>
+        <label class="file-label">
+          <span class="file-icon">💰</span>
+          <span>TikTok Settlements</span>
+          <input type="file" id="tiktokSettlements" class="file-input" />
+          <span class="file-placeholder" data-placeholder="tiktokSettlements">No file chosen</span>
+        </label>
+        <label class="file-label optional">
+          <span class="file-icon">🏦</span>
+          <span>Stripe Payouts <small>(optional)</small></span>
+          <input type="file" id="stripePayouts" class="file-input" />
+          <span class="file-placeholder" data-placeholder="stripePayouts">No file chosen</span>
+        </label>
+      </div>
+      <div class="api-key-section">
+        <label for="grokKey" class="key-label">
+          <span>🔑 Grok API Key <small>(optional)</small></span>
+          <input type="password" id="grokKey" placeholder="xai-..." autocomplete="off" />
+        </label>
+        <p class="hint">Add your key to unlock AI‑generated executive summaries after the audit.</p>
+      </div>
+      <button id="runAudit" class="audit-btn" onclick="runAudit()">
+        <span class="btn-text">Run Audit</span>
+        <span class="btn-loader hidden" id="btnLoader"></span>
+      </button>
+      <div id="progress" class="progress-message hidden">
+        <div class="spinner"></div>
+        <span>Processing your data...</span>
+      </div>
+    </section>
+
+    <!-- Report Section (hidden) -->
+    <section id="report" class="card report-card hidden">
+      <div class="card-header">
+        <h2>📊 Audit Report</h2>
+        <p>Your forensic analysis is complete.</p>
+      </div>
+      <div id="reportContent"></div>
+    </section>
+
+    <footer>
+      <p>Deterministic rule engine · AI narration optional · Serious revenue integrity</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // 1. Show chosen file name – no network request
+    document.querySelectorAll('.file-input').forEach(input => {
+      input.addEventListener('change', function () {
+        const placeholder = this.parentElement.querySelector('.file-placeholder');
+        if (this.files.length > 0) {
+          placeholder.textContent = this.files[0].name;
+        } else {
+          placeholder.textContent = 'No file chosen';
+        }
+      });
+    });
+
+    // 2. Single /audit call
+    async function runAudit() {
+      const formData = new FormData();
+      const files = {
+        shopifyOrders: 'shopify_orders',
+        shopifyPayouts: 'shopify_payouts',
+        tiktokOrders: 'tiktok_orders',
+        tiktokSettlements: 'tiktok_settlements',
+        stripePayouts: 'stripe_payouts'
+      };
+      Object.entries(files).forEach(([id, name]) => {
+        const f = document.getElementById(id).files[0];
+        if (f) formData.append(name, f);
+      });
+      const grokKey = document.getElementById('grokKey').value;
+      if (grokKey) formData.append('grok_api_key', grokKey);
+
+      document.getElementById('progress').classList.remove('hidden');
+      document.getElementById('runAudit').disabled = true;
+      document.getElementById('btnLoader').classList.remove('hidden');
+      document.querySelector('.btn-text').classList.add('hidden');
+
+      try {
+        // Only one endpoint – the backend handles everything
+        const auditResp = await fetch('/audit', { method: 'POST', body: formData });
+        const report = await auditResp.json();
+        displayReport(report);
+      } catch (e) {
+        alert('Audit failed: ' + e.message);
+      } finally {
+        document.getElementById('progress').classList.add('hidden');
+        document.getElementById('runAudit').disabled = false;
+        document.getElementById('btnLoader').classList.add('hidden');
+        document.querySelector('.btn-text').classList.remove('hidden');
+      }
+    }
+
+    function displayReport(report) {
+      document.getElementById('report').classList.remove('hidden');
+      const content = document.getElementById('reportContent');
+      content.innerHTML = `
+        <div class="scores-grid">
+          <div class="score-card">
+            <span class="score-label">Data Quality</span>
+            <span class="score-value">${report.data_quality_score}<small>/100</small></span>
+          </div>
+          <div class="score-card">
+            <span class="score-label">Leakage Risk</span>
+            <span class="score-value">${report.leakage_risk_score}<small>/100</small></span>
+          </div>
+          <div class="score-card">
+            <span class="score-label">Est. Recoverable</span>
+            <span class="score-value">$${report.estimated_recoverable_value.toFixed(2)}</span>
+          </div>
+        </div>
+        <h3 class="findings-title">🔍 Detailed Findings</h3>
+        <ul class="findings-list">
+          ${report.findings.map(f => `
+            <li class="finding-item ${f.confidence.toLowerCase().replace(' ', '-')}">
+              <span class="confidence-badge">${f.confidence}</span>
+              <div class="finding-text">${f.summary}</div>
+            </li>
+          `).join('')}
+        </ul>
+        ${report.executive_narrative ? `
+          <div class="narrative-card">
+            <h3>🧠 AI Executive Summary</h3>
+            <p>${report.executive_narrative.replace(/\n/g, '<br>')}</p>
+          </div>
+        ` : ''}
+      `;
+      document.getElementById('report').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
